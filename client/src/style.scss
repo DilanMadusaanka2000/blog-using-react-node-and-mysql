@@ -1,12 +1,18 @@
 $lightblue: #b9e7e7;
 .App{
-
+    display: flex;
+    justify-content: center;
 
 
     .container{
 
-
+            width: 1024px;
         //Login and register page style
+
+        .link{
+            text-decoration: none;
+            color: inherit;
+        }
 
        .auth{
 
@@ -70,6 +76,62 @@ $lightblue: #b9e7e7;
 
 
        //navbar style
+
+
+
+       .navbar{
+
+        .container{
+
+            padding: 10px 0px;
+            display: flex;
+            justify-content: space-between;
+
+
+            .logo{
+
+
+                img{
+
+                    width: 120px;
+                }
+            }
+            .links{
+
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                h6{
+                    font-size: 16px;
+                    font-weight: 300;
+                }
+                span{
+                    cursor: pointer;
+                }
+                .write{
+                   background-color: blue;
+                   width: 50px;
+                   height: 50px;
+                   border-radius: 50%;
+                   display: flex;
+                   align-items: center;
+                   justify-content: center;
+                   font-weight: 300;
+                   border: 1px solid rgb(63, 59, 255);
+
+
+                   &:hover {
+                    color: teal;
+                    background-color: white;
+                    border: 1px solid rgb(27, 34, 241);
+                  }
+                }
+            }
+
+
+        }
+       }
 
     }
 }
