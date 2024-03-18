@@ -12,26 +12,26 @@ function Navbar() {
         </div>
         <div className="links">
 
-           <Link className='link' to="/?cat=cricket"  >
-            <h6> CRICKET</h6>
+           <Link className='link' to="/?cat=news"  >
+            <h6> Cricket News</h6>
            </Link>
 
-           <Link className='link' to="/?cat=legue"  >
-            <h6> LEGUE</h6>
-           </Link>
-
-
-           <Link className='link' to="/?cat=technology"  >
-            <h6> TECHNOLOGY</h6>
+           <Link className='link' to="/?cat=history"  >
+            <h6> Cricket History</h6>
            </Link>
 
 
-           <Link className='link' to="/?cat=worldcup"  >
-            <h6> WORLD CUP</h6>
+           <Link className='link' to="/?cat=profile "  >
+            <h6>Player Profile</h6>
            </Link>
 
-           <Link className='link' to="/?cat=rank"  >
-            <h6> RANK</h6>
+
+           <Link className='link' to="/?cat=analysis"  >
+            <h6>Match Analysis</h6>
+           </Link>
+
+           <Link className='link' to="/?cat=culture"  >
+            <h6> Cricket Culture</h6>
            </Link>
 
            <span>Dilan</span>
