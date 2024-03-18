@@ -1,7 +1,10 @@
 import React from 'react'
+import { useContext } from 'react'
 import { useState } from 'react'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
 import axios from "axios"
+
+import { AuthContext } from '../context/authContex'
 
 
 
@@ -25,6 +28,8 @@ const Login =()=> {
 
   const navigate = useNavigate();
 
+  const {login} = useContext(AuthContext);
+
 
 
 
@@ -40,6 +45,8 @@ const Login =()=> {
 
 
    try {
+
+    await login(inputs)
 
      await axios.post("auth/login", inputs);
     navigate("/");
