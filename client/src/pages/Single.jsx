@@ -12,6 +12,8 @@ import moment from "moment";
 import { useContext } from "react";
 
 import Menu from "../components/Menu"
+//import DOMPurify from "dompurify";
+
 
 
 function Single() {
@@ -53,6 +55,11 @@ function Single() {
   
 
 
+const getText = (html) =>{
+  const doc = new DOMParser().parseFromString(html, "text/html")
+  return doc.body.textContent
+}
+
 
 
 
@@ -62,7 +69,7 @@ function Single() {
       <div className="content">
   
          
-         <img src={post?.img} alt="" />
+         <img src={`../upload/${post?.img}`} alt="" />
 
          <div className="user">
 
@@ -93,10 +100,9 @@ function Single() {
 
   
 
-          {post.desc}
-   
+       
 
-
+         {getText(post.desc)}
           
 
 
