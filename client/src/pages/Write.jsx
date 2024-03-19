@@ -6,10 +6,30 @@ import 'react-quill/dist/quill.snow.css';
 function Write() {
 
   const [value , setValue] = useState ('');
+  const [title , setTitle] = useState ('');
+  const [file , setFile] = useState ('null');
+  //const [cat , setcat] = useState ('');
+  const [cat, setCat] = useState("");
+
+
+  
+const handleClick = async (e) =>{
+  e.preventDefault();
+
+
+}
+
+
+
+
+
+
+
+
   return (
     <div className='add'>
       <div className="content">
-        <input type="text" placeholder='title' />
+        <input type="text" placeholder='title'  onChange={(e) => setTitle(e.target.value)} />
         <div className="editorContainer">
          <ReactQuill className="editor" theme="snow" value={value} onChange={setValue} />
 
@@ -25,11 +45,11 @@ function Write() {
           <span>
             <b>Visibility</b> public
           </span>
-          <input style={{display:"none"}} type="file" id='file' name=''  />
+          <input style={{display:"none"}} type="file" id='file' name=''   onChange={(e) => setFile(e.target.files[0])} />
           <label className='file' htmlFor="file">Uplode Image</label>
           <div className="button">
             <button>Save as draft </button>
-            <button>Update</button>
+            <button onClick={handleClick}>Publish</button>
           </div>
         </div>
         <div className="item">
@@ -39,30 +59,30 @@ function Write() {
           <div className="cat">
 
 
-          <input type="radio" name='cat' value="news" id='news' />
+          <input type="radio" name='cat' value="news" id='news'  onChange={(e) => setCat(e.target.value)} />
           <label htmlFor="news">Cricket News</label>   </div>
 
 
           <div className="cat">
 
-          <input type="radio" name='cat' value="history" id='history' />
+          <input type="radio" name='cat' value="history" id='history'  onChange={(e) => setCat(e.target.value)} />
           <label htmlFor="history">Cricket History</label>  </div>
 
 
           <div className="cat">
 
-          <input type="radio" name='cat' value="profile" id='profile' />
+          <input type="radio" name='cat' value="profile" id='profile'  onChange={(e) => setCat(e.target.value)} />
           <label htmlFor="profile">Palyer Profile</label>  </div>
 
 
           <div className="cat">
 
-          <input type="radio" name='cat' value="nalysis" id='nalysis' />
+          <input type="radio" name='cat' value="nalysis" id='anlysis'  onChange={(e) => setCat(e.target.value)} />
           <label htmlFor="nalysis">Match Analysis</label>  </div>
 
           <div className="cat">
 
-          <input type="radio" name='cat' value="culture" id='culture' />
+          <input type="radio" name='cat' value="culture" id='culture'  onChange={(e) => setCat(e.target.value)} />
           <label htmlFor="culture">Cricket Culture</label> </div>
 
 
