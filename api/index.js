@@ -17,7 +17,7 @@ app.use(cookieParser())
 //     res.json("it works")
 //  })
 
-
+//error 
 // const upload=  multer({dest: 'uploads/'})
 
 
