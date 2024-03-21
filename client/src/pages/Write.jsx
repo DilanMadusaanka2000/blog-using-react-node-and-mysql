@@ -15,9 +15,10 @@ function Write() {
 
   const [value , setValue] = useState ( state?.title ||'');
   const [title , setTitle] = useState (state?.desc ||'');
-  const [file , setFile] = useState ('null');
+  const [file , setFile] = useState (null);
   //const [cat , setcat] = useState ('');
   const [cat, setCat] = useState(state?.cat ||"");
+
 
 
 
@@ -41,6 +42,10 @@ const handleClick = async (e) =>{
   const imgUrl = await upload();
 
 
+
+
+
+   
 
   
   try {

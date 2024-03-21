@@ -7,21 +7,14 @@ import cookieParser from "cookie-parser";
 
 import multer from "multer"
 
+//import path from "path";
+
 
 const app = express()
 
-app.use(express.json())
-app.use(cookieParser())
+app.use(express.json());
+app.use(cookieParser());
 
-//  app.get("/test",(req,res)=>{
-//     res.json("it works")
-//  })
-
-//error 
-// const upload=  multer({dest: 'uploads/'})
-
-
-//uplode the file using multer 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, "../client/public/upload");
@@ -51,4 +44,4 @@ app.use("/api/posts",postRoutes)
 app.listen(8800,()=>{
 
     console.log("connected")
-})
+});

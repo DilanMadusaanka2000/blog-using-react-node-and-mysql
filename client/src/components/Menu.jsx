@@ -10,7 +10,7 @@ import axios from "axios";
 
 
 
-function Menu({cat}) {
+const Menu =({cat})=> {
 
 
 
